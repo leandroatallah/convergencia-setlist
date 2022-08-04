@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Box,
   Divider,
@@ -12,20 +12,20 @@ import {
   Select,
   SelectChangeEvent,
   Stack,
-  Typography,
-} from '@mui/material';
+  Typography
+} from '@mui/material'
 
 const SetList = () => {
-  const [order, setOrder] = React.useState('asc');
-  const [tone, setTone] = React.useState('all');
+  const [order, setOrder] = React.useState('asc')
+  const [tone, setTone] = React.useState('all')
 
   const handleOrderChange = (event: SelectChangeEvent) => {
-    setOrder(event.target.value as string);
-  };
+    setOrder(event.target.value as string)
+  }
 
   const handleToneChange = (event: SelectChangeEvent) => {
-    setTone(event.target.value as string);
-  };
+    setTone(event.target.value as string)
+  }
 
   return (
     <>
@@ -76,7 +76,7 @@ const SetList = () => {
         sx={{
           width: '100%',
           bgcolor: 'rgba(127, 127, 127, 0.1)',
-          marginBottom: '2rem',
+          marginBottom: '2rem'
         }}
       >
         <List sx={{ padding: 0 }}>
@@ -87,13 +87,13 @@ const SetList = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: '1.25rem',
+                    fontSize: '1.25rem'
                   }}
                 >
                   Nome completo da música
                 </Typography>
-              );
-              const secondary = `Tom: C - Artista: Nome do artista`;
+              )
+              const secondary = `Tom: C - Artista: Nome do artista`
               return (
                 <>
                   <ListItem key={index} sx={{ padding: 0 }}>
@@ -103,20 +103,20 @@ const SetList = () => {
                         secondary={secondary}
                         sx={{
                           primary: {
-                            fontSize: '2rem',
-                          },
+                            fontSize: '2rem'
+                          }
                         }}
                       />
                     </ListItemButton>
                   </ListItem>
                   <Divider component="li" />
                 </>
-              );
+              )
             })}
         </List>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default SetList;
+export default SetList
