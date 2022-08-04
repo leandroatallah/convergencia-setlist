@@ -1,18 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { purple } from '@mui/material/colors';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { purple } from '@mui/material/colors'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
-import App from './App';
+import App from './App'
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark'
+  }
+})
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: purple[800],
-    },
-  },
-});
+      main: purple[800]
+    }
+  }
+})
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -24,4 +30,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
-);
+)
